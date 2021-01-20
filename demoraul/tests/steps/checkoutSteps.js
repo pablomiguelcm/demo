@@ -31,10 +31,11 @@ Then(/^Se muestra la opción de pagar a plazos$/, async function () {
 
 
 When(/^El usuario pulsa el check para confirmar las politicas de cookies$/, async function () {
+    await browser.pause(3000);
+    await browser.switchToFrame(1);
     var aceptarCond = await browser.$(condiciones.aceptarCond);
     await browser.waitUntil(() => aceptarCond.isExisting());
     await aceptarCond.click();
-    await browser.pause(3000);
 });
 
 When(/^Pulsa en Empiezo ahora$/, async function () {
