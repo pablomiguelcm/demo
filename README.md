@@ -1,3 +1,4 @@
 # demo
 
-Run: wdio wdio_conf.js
+Inicializar: $npm install
+Run: wdio $wdio_conf.js
